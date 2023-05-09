@@ -1,0 +1,9 @@
+.main {
+    flex: 8;
+    display: flex;
+    padding: 80px 150px;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: space-between;
+    overflow: auto;
+}

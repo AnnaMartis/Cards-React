@@ -1,0 +1,12 @@
+.button {
+    cursor: pointer;
+    border: 0.01rem solid blue;
+    width: 100px;
+    height: 30px;
+    margin-right: 40px;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
