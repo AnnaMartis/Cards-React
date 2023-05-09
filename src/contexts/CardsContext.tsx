@@ -11,10 +11,15 @@ interface ICardContext {
   onRemove: (id: number) => void;
   onSort: () => void;
 }
-const CardContext: Context<any> = createContext({});
+const CardContext: Context<ICardContext> = createContext({
+  cards: [] as ICard[],
+  onAdd: (card: ICard) => {},
+  onRemove: (id: number) => {},
+  onSort: () => {},
+});
 
 export const CardContextProvider = ({ children }: { children: ReactNode }) => {
-  const [cards, setCards] = useState<ICard[] | []>([]);
+  const [cards, setCards] = useState<ICard[]>([] as ICard[]);
 
   const handleAddCard = (card: ICard) => {
     setCards((prevCards) => {
